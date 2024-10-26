@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diwali Fortune Checker</title>
+    <style>
+        /* General Styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('https://www.shutterstock.com/image-vector/happy-diwali-indian-festivals-light-600nw-2207661135.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            padding: 20px;
+        }
+
+        /* Dim overlay effect */
+        body::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity to control the dimness */
+            z-index: 0;
+        }
+
+        .diwali-heading {
+            font-size: 1.5rem;
+            color: #ff6f00;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: pulseGlow 1.5s infinite ease-in-out;
+            z-index: 1;
+        }
+
+        /* Pulsing Glow Animation */
+        @keyframes pulseGlow {
+            0%, 100% {
+                text-shadow: 0 0 10px rgba(254, 160, 88, 0.6), 0 0 20px rgba(255, 193, 7, 0.8), 0 0 30px rgba(255, 111, 0, 1);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(255, 111, 0, 0.8), 0 0 30px rgba(255, 193, 7, 1), 0 0 40px rgba(255, 111, 0, 1);
+            }
+        }
+
+        /* Form Styling */
+        .fortune-form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 12px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            z-index: 1;
+        }
+
+        .fortune-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #d97706;
+            font-size: 1.1rem;
+        }
+
+        .fortune-form input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ffc107;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        /* Button Styling */
+        .fortune-form button {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(45deg, #ff5722, #ff9800);
+            box-shadow: 0px 5px 15px rgba(255, 87, 34, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .fortune-form button:hover {
+            background: linear-gradient(45deg, #ff9800, #ff5722);
+            box-shadow: 0px 8px 20px rgba(255, 87, 34, 0.6);
+            transform: scale(1.05);
+        }
+
+        .image {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            border-radius: 50%;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 500px) {
+            .diwali-heading {
+                font-size: 2rem;
+            }
+            .fortune-form {
+                padding: 20px;
+            }
+
+            .fortune-form label {
+                font-size: 1rem;
+            }
+
+            .fortune-form button {
+                padding: 10px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="fortune-form">
+    <div style="display: flex; gap: 21px; justify-content: center;">
+        <h1 class="diwali-heading">Wish You Happy Diwali</h1> 
+        <img class="image" src="https://i.pinimg.com/originals/64/eb/b3/64ebb32f64efe2cace9588243000a26c.jpg" alt="">
+    </div>
+    <form id="diwaliFortuneForm" method="POST" action="/couplesubmit">
+        <label for="yourName">Your Name</label>
+        <input type="text" id="yourName" name="name" placeholder="Enter your name" required>
+
+        <label for="lovedOneName">Your Loved One's Name</label>
+        <input type="text" id="lovedOneName" name="love" placeholder="Enter your loved one's name" required>
+
+        <button type="submit">✨ Check Fortune in Diwali ✨</button>
+    </form>
+</div>
+
+</body>
+</html>

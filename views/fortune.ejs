@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diwali Wishes</title>
+    <style>
+        /* General Styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-image: url('https://img.freepik.com/premium-photo/happy-diwali-traditional-indian-festival-diwali-festival-holiday-design-generative-ai_756405-2859.jpg'); /* Diwali-themed image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #fff;
+            padding: 20px;
+            flex-direction: column;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Dark Overlay */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity to control darkness */
+            z-index: 0;
+        }
+
+        /* Diwali Heading */
+        .diwali-heading {
+            font-size: 3rem;
+            color: #ffda79;
+            text-shadow: 0 0 10px rgba(255, 218, 121, 0.7), 0 0 20px rgba(255, 140, 0, 0.9);
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: glowPulse 1.5s ease-in-out infinite;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Glow Animation */
+        @keyframes glowPulse {
+            0%, 100% {
+                text-shadow: 0 0 15px rgba(255, 218, 121, 0.7), 0 0 30px rgba(255, 140, 0, 0.9), 0 0 45px rgba(255, 87, 34, 1);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(255, 218, 121, 1), 0 0 35px rgba(255, 140, 0, 1), 0 0 60px rgba(255, 87, 34, 1);
+            }
+        }
+
+        /* Wishes Container */
+        .wishes-container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 25px;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 1;
+        }
+
+        .wishes-container p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+
+        /* Custom Button */
+        .send-wish-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: linear-gradient(45deg, #ff9800, #ff5722);
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0px 5px 15px rgba(255, 87, 34, 0.4);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .send-wish-btn:hover {
+            background: linear-gradient(45deg, #ff5722, #ff9800);
+            box-shadow: 0px 8px 20px rgba(255, 87, 34, 0.6);
+            transform: scale(1.05);
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 600px) {
+            .diwali-heading {
+                font-size: 2.5rem;
+            }
+            .wishes-container {
+                padding: 20px;
+            }
+            .wishes-container p {
+                font-size: 1rem;
+            }
+            .send-wish-btn {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Diwali Wishes Section -->
+    <h1 class="diwali-heading">✨ Happy Diwali ✨</h1>
+    <div class="wishes-container">
+        <p>Wishing you and your loved ones a bright and joyful Diwali! May this festival of lights bring happiness, prosperity, and love to your home.</p>
+        <p>May every diya you light shine prosperity and health into your life. Here's to a Diwali filled with love, laughter, and endless blessings!</p>
+        
+        <!-- Send Wishes Button -->
+        <a href="#" class="send-wish-btn">Send Diwali Wishes</a>
+    </div>
+
+</body>
+</html>
