@@ -5,8 +5,7 @@
   "main": "script.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js",
-    "build": "react-scripts build" 
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -19,9 +18,5 @@
     "mongoose": "^8.7.3",
     "nodemon": "^3.1.7",
     "path": "^0.12.7"
-  },
-  "engines": {
-    "node": "14.x", 
-    "npm": "6.x"
   }
 }
