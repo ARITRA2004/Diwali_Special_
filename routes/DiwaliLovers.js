@@ -1,6 +1,10 @@
 import mongoose, { mongo } from "mongoose";
+import dotenv from "dotenv";
 
-mongoose.connect("mongodb://127.0.0.1:27017/coupleDetails");
+// Load environment variables from .env file
+dotenv.config();
+
+mongoose.connect(process.env.MONGODB_URI);
 
 const coupleDetails = mongoose.Schema({
     name:String,
